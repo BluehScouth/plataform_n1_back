@@ -1,0 +1,11 @@
+{
+  "name": "chatbot",
+  "connector": "mongodb",
+  "url": "mongodb+srv://userogmega:M44576266@cluster0-a0ric.mongodb.net/chatbot?retryWrites=true",
+  "host": "cluster0-a0ric.mongodb.net",
+  "port": 80,
+  "user": "userogmega",
+  "password": "M44576266",
+  "database": "chatbot",
+  "useNewUrlParser": true
+}
