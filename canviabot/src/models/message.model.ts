@@ -1,6 +1,6 @@
-import {Entity, model, property} from '@loopback/repository';
+import { Entity, model, property } from '@loopback/repository';
 
-@model({settings: {strict: false}})
+@model({ settings: { strict: false } })
 export class Message extends Entity {
   @property({
     type: 'string',
@@ -31,6 +31,12 @@ export class Message extends Entity {
     required: true,
   })
   msg: string;
+
+  @property({
+    type: 'date',
+    default: () => new Date(),
+  })
+  createdAt?: Date;
 
   // Define well-known properties here
 

@@ -1,7 +1,7 @@
-import {Entity , model, property} from '@loopback/repository';
+import { Entity, model, property } from '@loopback/repository';
 
-@model({settings: {strict: false}})
-export class Userinfo extends Entity  {
+@model({ settings: { strict: false } })
+export class Userinfo extends Entity {
 
   @property({
     type: 'string',
@@ -12,7 +12,7 @@ export class Userinfo extends Entity  {
   @property({
     type: 'string',
     required: true
-    
+
   })
   userId: string;
 
@@ -51,6 +51,18 @@ export class Userinfo extends Entity  {
     required: true,
   })
   descripcion: string;
+
+  @property({
+    type: 'string',
+    default: 'Onhold'
+  })
+  sessionState: string;
+
+  @property({
+    type: 'date',
+    default: () => new Date(),
+  })
+  createdAt?: Date;
 
   // Define well-known properties here
 
